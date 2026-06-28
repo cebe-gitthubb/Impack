@@ -4,26 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Atap Tropis Pro | Solusi Atap Modern untuk Rumah Tropis</title>
+  <title>IMPACT | Solusi Atap Modern untuk Rumah Tropis</title>
 
-  <meta name="description" content="Solusi atap modern untuk rumah tropis yang sejuk, kuat, tahan panas, anti bocor, hemat energi, dan cocok untuk iklim Indonesia." />
-  <meta name="keywords" content="atap modern, atap tropis, atap rumah, atap anti panas, atap anti bocor, solusi atap rumah" />
-  <meta name="author" content="Atap Tropis Pro" />
+  <meta 
+    name="description" 
+    content="IMPACT menghadirkan Solusi Atap Modern untuk Rumah Tropis dan solusi atap rumah minimalis modern yang kuat, elegan, tahan cuaca, dan cocok untuk iklim Indonesia."
+  />
+
+  <meta 
+    name="keywords" 
+    content="Solusi Atap Modern untuk Rumah Tropis, solusi atap rumah minimalis modern, atap rumah tropis, atap minimalis modern, atap miring satu arah, atap datar, atap kombinasi, atap rumah modern"
+  />
+
+  <meta name="author" content="IMPACT" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="IMPACT | Solusi Atap Modern untuk Rumah Tropis" />
+  <meta property="og:description" content="Solusi atap rumah minimalis modern untuk hunian tropis: kuat, rapi, elegan, dan tahan cuaca." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/rumah-tropis-1.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "IMPACT",
+    "description": "Solusi Atap Modern untuk Rumah Tropis dan solusi atap rumah minimalis modern.",
+    "areaServed": "Indonesia",
+    "serviceType": "Konsultasi dan rekomendasi model atap rumah minimalis modern"
+  }
+  </script>
 
   <style>
     :root {
-      --primary: #0ea5e9;
-      --primary-dark: #0369a1;
-      --secondary: #22c55e;
-      --accent: #facc15;
-      --bg: #f8fafc;
+      --red: #e51f2a;
+      --red-dark: #b91520;
+      --navy: #26337c;
+      --navy-dark: #111b54;
+      --blue-soft: #eef2ff;
       --white: #ffffff;
-      --text: #0f172a;
+      --bg: #f7f8fc;
+      --text: #111827;
       --muted: #64748b;
       --border: #e2e8f0;
-      --shadow: 0 20px 45px rgba(15, 23, 42, 0.10);
-      --radius: 24px;
-      --max-width: 1160px;
+      --shadow: 0 24px 60px rgba(17, 24, 39, 0.12);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1180px;
     }
 
     * {
@@ -37,10 +65,15 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     a {
@@ -48,131 +81,161 @@
       color: inherit;
     }
 
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
     .container {
       width: min(100% - 32px, var(--max-width));
-      margin: auto;
+      margin-inline: auto;
     }
 
     .section {
-      padding: 90px 0;
+      padding: 96px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(229, 31, 42, 0.10);
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+      color: var(--navy-dark);
+    }
+
+    .section-desc {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .text-red {
+      color: var(--red);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 50px;
+      min-height: 52px;
       padding: 0 24px;
-      border-radius: 999px;
       border: none;
-      font-weight: 700;
+      border-radius: 999px;
+      font-weight: 800;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: 0.28s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--red), var(--navy));
       color: var(--white);
-      box-shadow: 0 14px 30px rgba(14, 165, 233, 0.28);
+      box-shadow: 0 16px 36px rgba(229, 31, 42, 0.26);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.35);
+      box-shadow: 0 22px 48px rgba(38, 51, 124, 0.28);
     }
 
-    .btn-light {
+    .btn-outline {
       background: var(--white);
-      color: var(--primary-dark);
+      color: var(--navy);
       border: 1px solid var(--border);
     }
 
-    .btn-light:hover {
+    .btn-outline:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow);
+      border-color: rgba(38, 51, 124, 0.28);
     }
 
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(14, 165, 233, 0.12);
-      color: var(--primary-dark);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .section-title {
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      margin-bottom: 16px;
-    }
-
-    .section-desc {
-      max-width: 720px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    /* Header */
-    header {
+    /* HEADER */
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 99;
-      background: rgba(248, 250, 252, 0.86);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(247, 248, 252, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
     }
 
     .navbar {
-      height: 76px;
+      height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
     }
 
-    .logo {
-      display: flex;
+    .brand {
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 20px;
+      gap: 12px;
       font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -0.5px;
     }
 
-    .logo-icon {
-      width: 42px;
-      height: 42px;
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand-name {
       display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--white);
+      line-height: 1.05;
+    }
+
+    .brand-name strong {
+      font-size: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-name span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
-      font-weight: 700;
+      gap: 26px;
       color: var(--muted);
+      font-size: 15px;
+      font-weight: 800;
     }
 
     .nav-links a:hover {
-      color: var(--primary-dark);
+      color: var(--red);
     }
 
     .menu-btn {
       display: none;
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border: 1px solid var(--border);
       border-radius: 14px;
       background: var(--white);
@@ -183,43 +246,62 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--text);
+      background: var(--navy);
       margin: 5px auto;
       border-radius: 2px;
     }
 
-    /* Hero */
+    /* HERO */
     .hero {
-      padding: 95px 0 80px;
-      background:
-        radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), transparent 32%),
-        radial-gradient(circle at top right, rgba(14, 165, 233, 0.22), transparent 34%);
+      position: relative;
       overflow: hidden;
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(circle at top left, rgba(229, 31, 42, 0.13), transparent 30%),
+        radial-gradient(circle at top right, rgba(38, 51, 124, 0.18), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f7f8fc 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.02fr 0.98fr;
       gap: 54px;
       align-items: center;
     }
 
+    .hero-content {
+      animation: fadeUp 0.75s ease both;
+    }
+
     .hero h1 {
-      font-size: clamp(42px, 7vw, 82px);
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: clamp(42px, 7vw, 78px);
       line-height: 0.98;
       letter-spacing: -4px;
-      margin-bottom: 24px;
+      color: var(--navy-dark);
     }
 
     .hero h1 span {
-      color: var(--primary-dark);
+      color: var(--red);
     }
 
-    .hero p {
-      max-width: 620px;
+    .hero-text {
+      max-width: 650px;
+      margin-bottom: 34px;
       color: var(--muted);
       font-size: 19px;
-      margin-bottom: 34px;
+    }
+
+    .keyword-line {
+      margin-bottom: 24px;
+      padding: 16px 18px;
+      border-left: 5px solid var(--red);
+      border-radius: 16px;
+      background: var(--white);
+      color: var(--navy);
+      box-shadow: 0 12px 28px rgba(17, 24, 39, 0.06);
+      font-weight: 750;
     }
 
     .hero-actions {
@@ -229,154 +311,109 @@
       margin-bottom: 34px;
     }
 
-    .hero-stats {
+    .hero-points {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
-      max-width: 610px;
+      max-width: 660px;
     }
 
-    .stat-card {
+    .point-card {
       padding: 18px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.82);
       border: 1px solid var(--border);
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
     }
 
-    .stat-card strong {
+    .point-card strong {
       display: block;
-      font-size: 28px;
-      color: var(--primary-dark);
+      margin-bottom: 4px;
+      color: var(--navy);
+      font-size: 20px;
     }
 
-    .stat-card span {
+    .point-card span {
       color: var(--muted);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 650;
     }
 
-    .hero-visual {
+    .hero-media {
       position: relative;
-      min-height: 510px;
+      animation: fadeIn 0.85s ease 0.15s both;
     }
 
-    .visual-card {
+    .hero-image-wrap {
       position: relative;
-      height: 510px;
-      border-radius: 36px;
-      background: linear-gradient(145deg, #ffffff, #ecfeff);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
       overflow: hidden;
+      border-radius: 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: var(--white);
+      isolation: isolate;
     }
 
-    .sun {
+    .hero-image-wrap::after {
+      content: "";
       position: absolute;
-      top: 44px;
-      right: 44px;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #fde68a, var(--accent));
-      box-shadow: 0 0 60px rgba(250, 204, 21, 0.45);
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(17, 27, 84, 0.56));
+      z-index: 1;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 610px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .hero-image-wrap:hover img {
+      transform: scale(1.035);
+    }
+
+    .image-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      color: var(--navy-dark);
+    }
+
+    .image-caption strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 19px;
+    }
+
+    .image-caption span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .floating-badge {
+      position: absolute;
+      z-index: 3;
+      top: 28px;
+      right: -14px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--red);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      font-weight: 900;
       animation: float 5s ease-in-out infinite;
     }
 
-    .house {
-      position: absolute;
-      left: 50%;
-      bottom: 58px;
-      width: 78%;
-      height: 260px;
-      transform: translateX(-50%);
-    }
-
-    .roof {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 150px;
-      clip-path: polygon(50% 0, 100% 70%, 88% 84%, 50% 30%, 12% 84%, 0 70%);
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.38), transparent 28%),
-        repeating-linear-gradient(90deg, #0284c7 0 18px, #0ea5e9 18px 36px);
-      filter: drop-shadow(0 18px 22px rgba(15, 23, 42, 0.18));
-    }
-
-    .house-body {
-      position: absolute;
-      left: 10%;
-      bottom: 0;
-      width: 80%;
-      height: 160px;
-      border-radius: 24px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
-    }
-
-    .window {
-      position: absolute;
-      top: 45px;
-      width: 62px;
-      height: 62px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #cffafe, #ffffff);
-      border: 1px solid #bae6fd;
-    }
-
-    .window.left {
-      left: 45px;
-    }
-
-    .window.right {
-      right: 45px;
-    }
-
-    .door {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      width: 68px;
-      height: 96px;
-      transform: translateX(-50%);
-      border-radius: 20px 20px 0 0;
-      background: linear-gradient(180deg, var(--primary), var(--primary-dark));
-    }
-
-    .badge {
-      position: absolute;
-      z-index: 3;
-      padding: 12px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
-      color: var(--primary-dark);
-      font-weight: 800;
-      font-size: 14px;
-    }
-
-    .badge.one {
-      left: 28px;
-      top: 158px;
-      animation: float 5.3s ease-in-out infinite;
-    }
-
-    .badge.two {
-      right: 28px;
-      top: 240px;
-      animation: float 5.8s ease-in-out infinite reverse;
-    }
-
-    .badge.three {
-      left: 48px;
-      bottom: 34px;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    /* Benefits */
+    /* BENEFITS */
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -384,17 +421,35 @@
     }
 
     .benefit-card {
+      position: relative;
+      overflow: hidden;
       padding: 30px;
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
       background: var(--white);
       border: 1px solid var(--border);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
-      transition: 0.3s ease;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.06);
+      transition: 0.28s ease;
+    }
+
+    .benefit-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--red), var(--navy));
+      opacity: 0;
+      transition: 0.28s ease;
     }
 
     .benefit-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow);
+    }
+
+    .benefit-card:hover::before {
+      opacity: 1;
     }
 
     .benefit-icon {
@@ -404,135 +459,277 @@
       place-items: center;
       margin-bottom: 18px;
       border-radius: 18px;
-      background: rgba(14, 165, 233, 0.12);
+      background: var(--blue-soft);
+      color: var(--navy);
       font-size: 26px;
     }
 
     .benefit-card h3 {
-      font-size: 22px;
       margin-bottom: 10px;
+      color: var(--navy-dark);
+      font-size: 22px;
+      letter-spacing: -0.3px;
     }
 
     .benefit-card p {
       color: var(--muted);
     }
 
-    /* Product */
-    .product {
+    /* PRODUCT MODEL */
+    .model-section {
       background: var(--white);
     }
 
-    .product-grid {
+    .model-grid {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 54px;
-      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
-    .product-image {
-      min-height: 390px;
-      display: grid;
-      place-items: center;
-      border-radius: 34px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.80), rgba(236,254,255,0.80)),
-        repeating-linear-gradient(135deg, #0284c7 0 20px, #0ea5e9 20px 40px);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .product-card {
-      width: min(84%, 360px);
-      padding: 28px;
+    .model-card {
+      overflow: hidden;
       border-radius: 28px;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(10px);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
+      transition: 0.28s ease;
+    }
+
+    .model-card:hover {
+      transform: translateY(-8px);
       box-shadow: var(--shadow);
     }
 
-    .product-card h3 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    .product-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .stars {
-      color: #eab308;
-      font-size: 20px;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .feature-item {
-      display: flex;
-      gap: 14px;
-      padding: 18px;
-      border-radius: 18px;
-      background: #f8fafc;
-      border: 1px solid var(--border);
-    }
-
-    .check {
-      flex: 0 0 auto;
-      width: 28px;
-      height: 28px;
+    .model-visual {
+      position: relative;
+      height: 210px;
+      background:
+        linear-gradient(135deg, rgba(38, 51, 124, 0.08), rgba(229, 31, 42, 0.08)),
+        #f8fafc;
       display: grid;
       place-items: center;
-      border-radius: 50%;
-      background: rgba(34, 197, 94, 0.14);
-      color: #15803d;
+      overflow: hidden;
+    }
+
+    .roof-shape {
+      width: 70%;
+      height: 95px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--navy) 0 14px,
+        #35429a 14px 28px
+      );
+      box-shadow: 0 18px 30px rgba(17, 27, 84, 0.22);
+    }
+
+    .roof-skillion {
+      clip-path: polygon(5% 35%, 100% 0, 95% 70%, 0 100%);
+    }
+
+    .roof-flat {
+      height: 72px;
+      border-radius: 8px;
+      transform: perspective(500px) rotateX(18deg);
+    }
+
+    .roof-multi {
+      height: 115px;
+      clip-path: polygon(
+        0 75%, 
+        28% 35%, 
+        43% 53%, 
+        65% 15%, 
+        100% 62%, 
+        100% 100%, 
+        0 100%
+      );
+    }
+
+    .model-content {
+      padding: 26px;
+    }
+
+    .model-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(229, 31, 42, 0.10);
+      color: var(--red);
+      font-size: 13px;
       font-weight: 900;
     }
 
-    .feature-item strong {
-      display: block;
-      margin-bottom: 3px;
+    .model-content h3 {
+      margin-bottom: 10px;
+      color: var(--navy-dark);
+      font-size: 23px;
+      line-height: 1.2;
     }
 
-    .feature-item span {
+    .model-content p {
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    .spec-list {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .spec-list li {
+      display: flex;
+      gap: 10px;
       color: var(--muted);
       font-size: 15px;
     }
 
-    /* CTA */
-    .cta-box {
-      padding: 54px;
+    .spec-list li::before {
+      content: "✓";
+      flex: 0 0 auto;
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(38, 51, 124, 0.10);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 430px;
+      border-radius: 32px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-info {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .gallery-info h3 {
+      color: var(--navy-dark);
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .gallery-info p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* SEO CONTENT */
+    .seo-box {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 38px;
+      align-items: start;
+      padding: 42px;
       border-radius: 34px;
       background:
-        radial-gradient(circle at top right, rgba(250, 204, 21, 0.35), transparent 28%),
-        linear-gradient(135deg, var(--primary-dark), var(--primary));
+        radial-gradient(circle at top left, rgba(229, 31, 42, 0.09), transparent 30%),
+        linear-gradient(135deg, #ffffff, #f8faff);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 38px rgba(17, 24, 39, 0.06);
+    }
+
+    .seo-box h2 {
+      color: var(--navy-dark);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -1.3px;
+    }
+
+    .seo-content {
+      display: grid;
+      gap: 16px;
+      color: var(--muted);
+    }
+
+    .seo-content strong {
+      color: var(--navy);
+    }
+
+    /* CTA */
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      padding: 58px;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at top right, rgba(229, 31, 42, 0.34), transparent 30%),
+        linear-gradient(135deg, var(--navy-dark), var(--navy));
       color: var(--white);
-      box-shadow: 0 26px 55px rgba(14, 165, 233, 0.26);
+      box-shadow: 0 26px 60px rgba(17, 27, 84, 0.28);
+    }
+
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .cta-content {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 30px;
+      gap: 32px;
       align-items: center;
     }
 
     .cta-box h2 {
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.1;
       margin-bottom: 12px;
+      font-size: clamp(31px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
     }
 
     .cta-box p {
-      max-width: 680px;
-      color: rgba(255, 255, 255, 0.86);
+      max-width: 730px;
+      color: rgba(255, 255, 255, 0.82);
       font-size: 18px;
     }
 
-    /* Contact */
+    /* CONTACT */
     .contact-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
@@ -543,41 +740,43 @@
     .contact-info,
     .contact-form {
       padding: 34px;
-      border-radius: 30px;
+      border-radius: 32px;
       background: var(--white);
       border: 1px solid var(--border);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.06);
     }
 
     .contact-info h2,
     .contact-form h2 {
-      font-size: 34px;
-      line-height: 1.2;
       margin-bottom: 12px;
+      color: var(--navy-dark);
+      font-size: 34px;
+      line-height: 1.18;
+      letter-spacing: -0.8px;
     }
 
     .contact-info p {
-      color: var(--muted);
       margin-bottom: 24px;
+      color: var(--muted);
     }
 
     .contact-list {
-      list-style: none;
       display: grid;
       gap: 14px;
+      list-style: none;
     }
 
     .contact-list li {
       padding: 16px;
       border-radius: 18px;
-      background: #f8fafc;
+      background: #f8faff;
       border: 1px solid var(--border);
       color: var(--muted);
     }
 
     .contact-list strong {
       display: block;
-      color: var(--text);
+      color: var(--navy);
     }
 
     .form-group {
@@ -587,31 +786,35 @@
     label {
       display: block;
       margin-bottom: 8px;
-      font-weight: 700;
+      color: var(--navy-dark);
+      font-weight: 850;
     }
 
     input,
-    textarea {
+    textarea,
+    select {
       width: 100%;
       min-height: 52px;
       padding: 14px 16px;
       border: 1px solid var(--border);
       border-radius: 16px;
-      background: #f8fafc;
+      background: #f8faff;
+      color: var(--text);
       outline: none;
-      transition: 0.2s ease;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--primary);
-      background: var(--white);
-      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.13);
+      transition: 0.22s ease;
     }
 
     textarea {
-      min-height: 130px;
+      min-height: 128px;
       resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--navy);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(38, 51, 124, 0.12);
     }
 
     .form-note {
@@ -620,37 +823,51 @@
       font-size: 14px;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
-      padding: 36px 0;
+      padding: 38px 0;
       background: var(--white);
       border-top: 1px solid var(--border);
     }
 
     .footer-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 18px;
+      justify-content: space-between;
+      gap: 20px;
       color: var(--muted);
       font-size: 15px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .footer-brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
     }
 
     .footer-links {
       display: flex;
       gap: 18px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .footer-links a:hover {
-      color: var(--primary-dark);
+      color: var(--red);
     }
 
-    /* Animation */
+    /* ANIMATION */
     .reveal {
       opacity: 0;
       transform: translateY(26px);
-      transition: 0.7s ease;
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
     .reveal.active {
@@ -658,37 +875,74 @@
       transform: translateY(0);
     }
 
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(26px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
     @keyframes float {
       0%, 100% {
         transform: translateY(0);
       }
-
       50% {
         transform: translateY(-12px);
       }
     }
 
-    /* Responsive */
-    @media (max-width: 980px) {
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
       .hero-grid,
-      .product-grid,
+      .seo-box,
       .contact-grid,
       .cta-content {
         grid-template-columns: 1fr;
       }
 
+      .hero-image-wrap img {
+        height: 520px;
+      }
+
+      .model-grid,
       .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero {
-        padding-top: 70px;
+      .cta-content {
+        align-items: start;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 780px) {
       .navbar {
-        height: 68px;
+        height: 70px;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name strong {
+        font-size: 19px;
+      }
+
+      .brand-name span {
+        display: none;
       }
 
       .menu-btn {
@@ -697,7 +951,7 @@
 
       .nav-links {
         position: absolute;
-        top: 68px;
+        top: 70px;
         left: 16px;
         right: 16px;
         display: none;
@@ -721,74 +975,89 @@
       }
 
       .nav-links a:hover {
-        background: #f8fafc;
-      }
-
-      .benefits-grid,
-      .hero-stats {
-        grid-template-columns: 1fr;
+        background: #f8faff;
       }
 
       .section {
-        padding: 70px 0;
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding: 62px 0 72px;
       }
 
       .hero h1 {
         letter-spacing: -2px;
       }
 
-      .visual-card {
-        height: 420px;
+      .hero-points,
+      .model-grid,
+      .benefits-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero-visual {
-        min-height: 420px;
+      .hero-image-wrap img {
+        height: 430px;
       }
 
-      .house {
-        width: 88%;
-        bottom: 48px;
-      }
-
-      .badge {
-        font-size: 12px;
-        padding: 10px 12px;
-      }
-
-      .badge.one {
-        left: 18px;
-        top: 128px;
-      }
-
-      .badge.two {
+      .floating-badge {
         right: 18px;
-        top: 205px;
+        top: 18px;
+        font-size: 14px;
       }
 
-      .badge.three {
-        left: 22px;
-        bottom: 24px;
-      }
-
+      .seo-box,
       .cta-box,
       .contact-info,
       .contact-form {
         padding: 26px;
+        border-radius: 26px;
       }
 
       .footer-inner {
         flex-direction: column;
         text-align: center;
       }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
 
-    @media (max-width: 430px) {
+    @media (max-width: 460px) {
       .hero-actions .btn {
         width: 100%;
       }
 
-      .product-image {
-        min-height: 320px;
+      .hero-image-wrap img {
+        height: 380px;
+      }
+
+      .image-caption {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+      }
+
+      .gallery-card,
+      .gallery-card img {
+        min-height: 360px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -796,22 +1065,31 @@
 
 <body>
 
-  <header>
+  <header class="site-header">
     <div class="container navbar">
-      <a href="#beranda" class="logo">
-        <span class="logo-icon">⌂</span>
-        <span>Atap Tropis Pro</span>
+      <a href="#beranda" class="brand" aria-label="IMPACT Solusi Atap Modern">
+        <img 
+          src="assets/impact-logo.png" 
+          alt="Logo IMPACT Solusi Atap Modern untuk Rumah Tropis"
+          width="58"
+          height="58"
+        />
+        <span class="brand-name">
+          <strong>IMPACT</strong>
+          <span>Modern Tropical Roofing</span>
+        </span>
       </a>
 
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
         <a href="#beranda">Beranda</a>
-        <a href="#manfaat">Manfaat</a>
-        <a href="#produk">Produk</a>
+        <a href="#manfaat">Keunggulan</a>
+        <a href="#produk">Model Atap</a>
+        <a href="#galeri">Inspirasi</a>
         <a href="#kontak">Kontak</a>
-        <a href="#kontak" class="btn btn-primary">Konsultasi</a>
+        <a href="#kontak" class="btn btn-primary">Konsultasi Gratis</a>
       </nav>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu navigasi" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -821,224 +1099,366 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero" id="beranda">
       <div class="container hero-grid">
-        <div>
+        <div class="hero-content">
           <span class="eyebrow">Solusi Atap Modern untuk Rumah Tropis</span>
 
           <h1>
-            Rumah Lebih Sejuk dengan <span>Atap Modern</span> Tahan Cuaca
+            Atap Rumah Tropis yang <span>Modern, Kuat, dan Elegan</span>
           </h1>
 
-          <p>
-            Sistem atap modern yang dirancang untuk iklim tropis Indonesia.
-            Lebih sejuk, ringan, kuat, anti bocor, hemat energi, dan cocok
-            untuk rumah baru maupun renovasi.
+          <p class="hero-text">
+            IMPACT menghadirkan <strong>Solusi Atap Modern untuk Rumah Tropis</strong> 
+            yang dirancang untuk hunian Indonesia: tampilan minimalis, perlindungan maksimal, 
+            sirkulasi lebih nyaman, dan karakter fasad yang lebih premium.
           </p>
 
-          <div class="hero-actions">
-            <a href="#kontak" class="btn btn-primary">Dapatkan Konsultasi</a>
-            <a href="#manfaat" class="btn btn-light">Lihat Keunggulan</a>
+          <div class="keyword-line">
+            Pilihan tepat untuk Anda yang mencari 
+            <strong>solusi atap rumah minimalis modern</strong> dengan desain rapi, fungsional, 
+            dan sesuai kebutuhan rumah tropis masa kini.
           </div>
 
-          <div class="hero-stats">
-            <div class="stat-card">
-              <strong>30%</strong>
-              <span>Lebih hemat panas</span>
+          <div class="hero-actions">
+            <a href="#kontak" class="btn btn-primary">Konsultasi Model Atap</a>
+            <a href="#produk" class="btn btn-outline">Lihat Pilihan Atap</a>
+          </div>
+
+          <div class="hero-points" aria-label="Keunggulan utama IMPACT">
+            <div class="point-card">
+              <strong>Tropis</strong>
+              <span>Cocok untuk panas dan hujan Indonesia</span>
             </div>
 
-            <div class="stat-card">
-              <strong>15+</strong>
-              <span>Tahun daya tahan</span>
+            <div class="point-card">
+              <strong>Modern</strong>
+              <span>Estetika minimalis dan kontemporer</span>
             </div>
 
-            <div class="stat-card">
-              <strong>100%</strong>
-              <span>Cocok iklim tropis</span>
+            <div class="point-card">
+              <strong>Fungsional</strong>
+              <span>Drainase, proteksi, dan kenyamanan</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="visual-card">
-            <div class="sun"></div>
+        <div class="hero-media">
+          <div class="floating-badge">Rumah Minimalis Modern</div>
 
-            <div class="badge one">☀️ Tahan Panas</div>
-            <div class="badge two">💧 Anti Bocor</div>
-            <div class="badge three">🌿 Hemat Energi</div>
+          <div class="hero-image-wrap">
+            <img 
+              src="assets/rumah-tropis-1.png" 
+              alt="Solusi Atap Modern untuk Rumah Tropis pada rumah minimalis modern"
+              width="760"
+              height="920"
+              fetchpriority="high"
+            />
 
-            <div class="house">
-              <div class="roof"></div>
-
-              <div class="house-body">
-                <div class="window left"></div>
-                <div class="window right"></div>
-                <div class="door"></div>
-              </div>
+            <div class="image-caption">
+              <strong>Desain atap modern untuk hunian tropis</strong>
+              <span>Visual bersih, tegas, dan cocok untuk rumah urban masa kini.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- BENEFITS -->
     <section class="section" id="manfaat">
       <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow">Product Benefits</span>
-          <h2 class="section-title">Keunggulan untuk Rumah Tropis</h2>
+          <span class="eyebrow">Keunggulan IMPACT</span>
+          <h2 class="section-title">
+            Kenapa Memilih Solusi Atap Rumah Minimalis Modern?
+          </h2>
           <p class="section-desc">
-            Atap modern yang membantu rumah tetap nyaman, aman, dan terlihat elegan.
+            Atap bukan hanya penutup bangunan. Dalam rumah tropis, atap berperan penting 
+            untuk kenyamanan suhu, perlindungan hujan, karakter desain, dan nilai visual hunian.
           </p>
         </div>
 
         <div class="benefits-grid">
           <article class="benefit-card reveal">
             <div class="benefit-icon">☀️</div>
-            <h3>Lebih Sejuk</h3>
+            <h3>Nyaman untuk Iklim Tropis</h3>
             <p>
-              Lapisan reflektif membantu mengurangi panas matahari sehingga suhu rumah terasa lebih nyaman.
+              Dirancang untuk membantu rumah tetap terasa nyaman pada kondisi panas, lembap, 
+              dan curah hujan tinggi khas wilayah tropis.
             </p>
           </article>
 
           <article class="benefit-card reveal">
             <div class="benefit-icon">💧</div>
-            <h3>Anti Bocor</h3>
+            <h3>Aliran Air Lebih Terkontrol</h3>
             <p>
-              Sistem sambungan rapat membantu mengurangi risiko rembesan air saat hujan deras.
-            </p>
-          </article>
-
-          <article class="benefit-card reveal">
-            <div class="benefit-icon">🛡️</div>
-            <h3>Kuat dan Tahan Lama</h3>
-            <p>
-              Material ringan namun kokoh, cocok untuk perlindungan jangka panjang.
-            </p>
-          </article>
-
-          <article class="benefit-card reveal">
-            <div class="benefit-icon">🌿</div>
-            <h3>Hemat Energi</h3>
-            <p>
-              Membantu mengurangi beban pendingin ruangan karena suhu rumah lebih stabil.
+              Model atap dapat disesuaikan agar air hujan mengalir lebih efektif, sehingga 
+              fasad rumah tetap rapi dan area bawah lebih terlindungi.
             </p>
           </article>
 
           <article class="benefit-card reveal">
             <div class="benefit-icon">🏡</div>
-            <h3>Desain Modern</h3>
+            <h3>Visual Minimalis Modern</h3>
             <p>
-              Tampilan bersih dan minimalis membuat rumah terlihat lebih profesional dan elegan.
+              Cocok untuk rumah dengan konsep clean, kotak, natural, industrial, maupun 
+              hunian tropis kontemporer.
             </p>
           </article>
 
           <article class="benefit-card reveal">
-            <div class="benefit-icon">⚡</div>
-            <h3>Pemasangan Cepat</h3>
+            <div class="benefit-icon">🛡️</div>
+            <h3>Struktur Terlihat Lebih Tegas</h3>
             <p>
-              Panel ringan memudahkan proses pemasangan dan renovasi rumah.
+              Bentuk atap yang tepat dapat memperkuat karakter bangunan dan membuat rumah 
+              terlihat lebih proporsional.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">🌿</div>
+            <h3>Mendukung Ventilasi Alami</h3>
+            <p>
+              Konsep atap tropis dapat dipadukan dengan bukaan, roster, shading, dan area hijau 
+              untuk kenyamanan hunian.
+            </p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon">⚙️</div>
+            <h3>Fleksibel untuk Rumah Baru atau Renovasi</h3>
+            <p>
+              Dapat disesuaikan dengan kebutuhan fasad, struktur eksisting, ukuran lahan, 
+              serta gaya rumah minimalis modern.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section product" id="produk">
-      <div class="container product-grid">
-        <div class="product-image reveal">
-          <div class="product-card">
-            <h3>Panel Atap Tropis</h3>
-            <p>
-              Material modern dengan perlindungan panas, air, dan korosi untuk rumah masa kini.
-            </p>
-            <div class="stars">★★★★★</div>
-          </div>
+    <!-- PRODUCT / MODEL ATAP -->
+    <section class="section model-section" id="produk">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Contoh Produk dan Spesifikasi</span>
+          <h2 class="section-title">
+            Bentuk / Model Atap untuk Rumah Tropis Modern
+          </h2>
+          <p class="section-desc">
+            Berikut beberapa pilihan model atap yang sering digunakan sebagai 
+            <strong>Solusi Atap Modern untuk Rumah Tropis</strong> dan 
+            <strong>solusi atap rumah minimalis modern</strong>.
+          </p>
         </div>
 
-        <div class="reveal">
-          <span class="eyebrow">Modern Roofing System</span>
-          <h2 class="section-title">Satu Sistem, Banyak Perlindungan</h2>
-          <p class="section-desc" style="margin: 0;">
-            Solusi atap yang tidak hanya melindungi rumah, tetapi juga membantu meningkatkan kenyamanan dan nilai hunian.
+        <div class="model-grid">
+          <article class="model-card reveal">
+            <div class="model-visual" aria-hidden="true">
+              <div class="roof-shape roof-skillion"></div>
+            </div>
+
+            <div class="model-content">
+              <span class="model-tag">Model 01</span>
+              <h3>Atap Miring Satu Arah</h3>
+              <p>
+                Atap Miring Satu Arah atau <em>Skillion / Mono-Pitch</em> memiliki satu bidang 
+                miring tegas. Model ini sangat efisien untuk mengalirkan air hujan dan memberikan 
+                kesan kontemporer.
+              </p>
+
+              <ul class="spec-list">
+                <li>Cocok untuk rumah minimalis modern.</li>
+                <li>Memberikan garis fasad yang tegas.</li>
+                <li>Efisien untuk arah aliran air hujan.</li>
+                <li>Ideal untuk konsep hunian urban tropis.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <div class="model-visual" aria-hidden="true">
+              <div class="roof-shape roof-flat"></div>
+            </div>
+
+            <div class="model-content">
+              <span class="model-tag">Model 02</span>
+              <h3>Atap Datar</h3>
+              <p>
+                Atap Datar atau <em>Flat Roof</em> memberikan tampilan clean dan kotak. 
+                Secara teknis, atap ini tidak benar-benar datar, melainkan memiliki kemiringan kecil 
+                untuk kebutuhan drainase.
+              </p>
+
+              <ul class="spec-list">
+                <li>Tampilan fasad lebih bersih dan modern.</li>
+                <li>Dapat dikembangkan sebagai area rooftop.</li>
+                <li>Cocok untuk rumah bergaya compact.</li>
+                <li>Perlu perencanaan drainase yang baik.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <div class="model-visual" aria-hidden="true">
+              <div class="roof-shape roof-multi"></div>
+            </div>
+
+            <div class="model-content">
+              <span class="model-tag">Model 03</span>
+              <h3>Atap Kombinasi Multi-Level</h3>
+              <p>
+                Atap Kombinasi atau <em>Multi-level Roof</em> memecah massa bangunan besar agar 
+                tidak terlihat monoton. Model ini memberi tampilan dinamis dan lebih arsitektural.
+              </p>
+
+              <ul class="spec-list">
+                <li>Membuat massa bangunan lebih proporsional.</li>
+                <li>Cocok untuk rumah dua lantai.</li>
+                <li>Memberikan visual tropis kontemporer.</li>
+                <li>Fleksibel untuk kombinasi material fasad.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="galeri">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Inspirasi Desain</span>
+          <h2 class="section-title">
+            Contoh Aplikasi Atap Rumah Tropis Modern
+          </h2>
+          <p class="section-desc">
+            Inspirasi visual untuk hunian yang membutuhkan atap kuat, rapi, dan selaras dengan 
+            karakter rumah minimalis modern.
           </p>
+        </div>
 
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Reflektif terhadap panas</strong>
-                <span>Membantu memantulkan panas matahari agar rumah tetap nyaman.</span>
-              </div>
-            </div>
+        <div class="gallery-grid">
+          <article class="gallery-card reveal">
+            <img 
+              src="assets/rumah-tropis-1.png" 
+              alt="Contoh Solusi Atap Modern untuk Rumah Tropis dengan atap miring gelap"
+              loading="lazy"
+              decoding="async"
+            />
 
-            <div class="feature-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Sambungan lebih rapat</strong>
-                <span>Membantu mengurangi risiko air masuk melalui celah atap.</span>
-              </div>
+            <div class="gallery-info">
+              <h3>Rumah Tropis Kontemporer</h3>
+              <p>
+                Atap miring tegas dengan warna gelap memberikan kesan modern, elegan, 
+                dan cocok untuk fasad tropis.
+              </p>
             </div>
+          </article>
 
-            <div class="feature-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Ringan dan kuat</strong>
-                <span>Mengurangi beban struktur tanpa mengorbankan daya tahan.</span>
-              </div>
-            </div>
+          <article class="gallery-card reveal">
+            <img 
+              src="assets/rumah-tropis-2.png" 
+              alt="Contoh solusi atap rumah minimalis modern dengan pagar kayu dan atap gelap"
+              loading="lazy"
+              decoding="async"
+            />
 
-            <div class="feature-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Cocok untuk renovasi</strong>
-                <span>Dapat digunakan untuk rumah baru maupun penggantian atap lama.</span>
-              </div>
+            <div class="gallery-info">
+              <h3>Hunian Minimalis Natural</h3>
+              <p>
+                Kombinasi atap gelap, elemen kayu, dan tanaman tropis menghasilkan tampilan 
+                rumah yang hangat tetapi tetap modern.
+              </p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT -->
+    <section class="section">
+      <div class="container">
+        <div class="seo-box reveal">
+          <h2>
+            Solusi Atap Modern untuk Rumah Tropis yang Lebih Fungsional
+          </h2>
+
+          <div class="seo-content">
+            <p>
+              Memilih <strong>Solusi Atap Modern untuk Rumah Tropis</strong> perlu mempertimbangkan 
+              bentuk bangunan, arah matahari, curah hujan, kebutuhan drainase, serta gaya desain rumah. 
+              Karena itu, model atap sebaiknya tidak hanya dilihat dari tampilannya, tetapi juga dari 
+              fungsi perlindungan dan kenyamanan hunian.
+            </p>
+
+            <p>
+              Untuk Anda yang mencari <strong>solusi atap rumah minimalis modern</strong>, IMPACT 
+              menghadirkan pendekatan desain yang menyeimbangkan estetika dan fungsi. Atap miring satu arah, 
+              atap datar, dan atap kombinasi dapat menjadi pilihan sesuai karakter rumah, ukuran lahan, 
+              serta kebutuhan visual fasad.
+            </p>
+
+            <p>
+              Dengan perencanaan yang tepat, atap rumah dapat membuat bangunan terlihat lebih rapi, 
+              lebih tegas, dan lebih siap menghadapi kondisi tropis seperti panas, hujan, dan kelembapan.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="section">
       <div class="container">
         <div class="cta-box reveal">
           <div class="cta-content">
             <div>
-              <h2>Siap Membuat Rumah Lebih Sejuk dan Aman?</h2>
+              <h2>
+                Butuh Rekomendasi Atap untuk Rumah Minimalis Modern?
+              </h2>
               <p>
-                Konsultasikan kebutuhan atap rumah Anda dan dapatkan rekomendasi solusi terbaik.
+                Konsultasikan kebutuhan rumah Anda bersama IMPACT dan temukan model atap terbaik 
+                untuk hunian tropis yang lebih nyaman, kuat, dan berkarakter.
               </p>
             </div>
 
-            <a href="#kontak" class="btn btn-light">Mulai Konsultasi</a>
+            <a href="#kontak" class="btn btn-outline">Mulai Konsultasi</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="section" id="kontak">
       <div class="container contact-grid">
         <div class="contact-info reveal">
-          <span class="eyebrow">Kontak Kami</span>
-          <h2>Konsultasi Atap Rumah Tropis</h2>
+          <span class="eyebrow">Hubungi IMPACT</span>
+          <h2>Konsultasi Solusi Atap Rumah Tropis</h2>
           <p>
-            Isi form berikut untuk simulasi kebutuhan atap, estimasi awal, dan rekomendasi material.
+            Isi form dummy berikut untuk simulasi permintaan konsultasi. Anda dapat menyesuaikan 
+            form ini ke WhatsApp, email, Google Form, atau backend website.
           </p>
 
           <ul class="contact-list">
+            <li>
+              <strong>Keyword Utama</strong>
+              Solusi Atap Modern untuk Rumah Tropis
+            </li>
+
+            <li>
+              <strong>Keyword Pendukung</strong>
+              solusi atap rumah minimalis modern
+            </li>
+
             <li>
               <strong>Area Layanan</strong>
               Indonesia
             </li>
 
             <li>
-              <strong>Telepon</strong>
-              +62 812-0000-0000
-            </li>
-
-            <li>
               <strong>Email</strong>
-              halo@ataptropispro.id
+              halo@impact-roofing.id
             </li>
           </ul>
         </div>
@@ -1048,25 +1468,52 @@
 
           <div class="form-group">
             <label for="name">Nama Lengkap</label>
-            <input type="text" id="name" placeholder="Masukkan nama Anda" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="nama@email.com" required />
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Masukkan nama Anda"
+              autocomplete="name"
+              required
+            />
           </div>
 
           <div class="form-group">
             <label for="phone">Nomor WhatsApp</label>
-            <input type="tel" id="phone" placeholder="08xxxxxxxxxx" required />
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              placeholder="08xxxxxxxxxx"
+              autocomplete="tel"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="roofType">Model Atap yang Diminati</label>
+            <select id="roofType" name="roofType" required>
+              <option value="">Pilih model atap</option>
+              <option value="Atap Miring Satu Arah">Atap Miring Satu Arah</option>
+              <option value="Atap Datar">Atap Datar</option>
+              <option value="Atap Kombinasi Multi-Level">Atap Kombinasi Multi-Level</option>
+              <option value="Belum Tahu">Belum Tahu, Butuh Rekomendasi</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label for="message">Kebutuhan Anda</label>
-            <textarea id="message" placeholder="Contoh: Saya ingin renovasi atap rumah ukuran 8x12 meter." required></textarea>
+            <textarea 
+              id="message" 
+              name="message" 
+              placeholder="Contoh: Saya ingin rekomendasi solusi atap rumah minimalis modern untuk rumah 2 lantai di area tropis."
+              required
+            ></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Kirim Permintaan</button>
+          <button type="submit" class="btn btn-primary">
+            Kirim Permintaan Konsultasi
+          </button>
 
           <p class="form-note">
             *Form ini masih dummy dan belum terhubung ke server.
@@ -1079,11 +1526,22 @@
 
   <footer>
     <div class="container footer-inner">
-      <p>© 2026 Atap Tropis Pro. Semua hak dilindungi.</p>
+      <div class="footer-brand">
+        <img 
+          src="assets/impact-logo.png" 
+          alt="Logo IMPACT"
+          width="42"
+          height="42"
+          loading="lazy"
+        />
+        <span>IMPACT</span>
+      </div>
+
+      <p>© 2026 IMPACT. Solusi Atap Modern untuk Rumah Tropis.</p>
 
       <div class="footer-links">
         <a href="#beranda">Beranda</a>
-        <a href="#manfaat">Manfaat</a>
+        <a href="#produk">Model Atap</a>
         <a href="#kontak">Kontak</a>
       </div>
     </div>
@@ -1094,42 +1552,53 @@
     const navLinks = document.getElementById("navLinks");
 
     menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+    document.querySelectorAll(".nav-links a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
       });
     });
 
     const revealItems = document.querySelectorAll(".reveal");
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
           entry.target.classList.add("active");
-        }
-      });
-    }, {
-      threshold: 0.15
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.16
+      }
+    );
+
+    revealItems.forEach((item) => {
+      revealObserver.observe(item);
     });
 
-    revealItems.forEach(item => observer.observe(item));
+    const contactForm = document.getElementById("contactForm");
 
-    const form = document.getElementById("contactForm");
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
 
       const name = document.getElementById("name").value.trim();
+      const roofType = document.getElementById("roofType").value;
 
       alert(
         "Terima kasih, " + (name || "Bapak/Ibu") + 
-        "! Permintaan konsultasi berhasil disimulasikan. Form ini masih dummy."
+        "! Permintaan konsultasi untuk " + 
+        (roofType || "model atap pilihan Anda") + 
+        " berhasil disimulasikan. Form ini masih dummy."
       );
 
-      form.reset();
+      contactForm.reset();
     });
   </script>
 
